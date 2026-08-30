@@ -40,7 +40,27 @@
         <section class="section booking" id="booking"><h2>Ready for your<br><em>next detail?</em></h2><div><p class="section-intro">We are currently welcoming new clients Tuesday through Saturday.</p><button class="button" id="bookButton" type="button">Book your appointment</button></div></section>
     </main>
     <footer><div class="footer-inner"><a class="brand" href="#top"><span class="brand-mark"></span>AURA LUX</a><div class="footer-meta">KUMASI,SOKOBNA <br>Mon–Sat · 9am–6pm<br>hello@auralux.studio</div></div><div class="copyright">© 2024 Aura Lux Studio. Beauty, thoughtfully.</div></footer>
-    <div class="toast" id="toast" role="status">Opening our appointment book...</div>
+    <div class="booking-modal" id="bookingModal" aria-hidden="true">
+        <div class="booking-backdrop" data-close-booking></div>
+        <section class="booking-panel" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+            <button class="booking-close" type="button" aria-label="Close booking" data-close-booking>&times;</button>
+            <div class="booking-panel-intro">
+                <p class="eyebrow">Your next ritual</p>
+                <h2 id="bookingTitle">Make it<br><em>luminous.</em></h2>
+                <p>Choose your details and we’ll hold a beautiful little pause in your week.</p>
+                <div class="booking-hours"><span>Tuesday–Saturday</span><strong>9am–6pm</strong></div>
+            </div>
+            <form class="booking-form" id="bookingForm">
+                <label>Service<select name="service" required><option value="">Choose a service</option><option>The Aura Set · 60 min · GHC 50</option><option>The Frame · 45 min · GHC 60</option><option>The Full Aura · 105 min · GHC 100</option></select></label>
+                <div class="form-row"><label>Date<input name="date" type="date" required></label><label>Time<select name="time" required><option value="">Select time</option><option>9:00 am</option><option>11:00 am</option><option>1:00 pm</option><option>3:00 pm</option><option>5:00 pm</option></select></label></div>
+                <div class="form-row"><label>Your name<input name="name" type="text" placeholder="e.g. Ama Mensah" required></label><label>Phone number<input name="phone" type="tel" placeholder="055 000 0000" required></label></div>
+                <label>Email address<input name="email" type="email" placeholder="you@example.com" required></label>
+                <button class="button" type="submit">Request appointment</button>
+                <p class="form-note">We’ll confirm your appointment by phone within one business day.</p>
+                <p class="booking-success" id="bookingSuccess" role="status">Your request is in. We’ll be in touch shortly.</p>
+            </form>
+        </section>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

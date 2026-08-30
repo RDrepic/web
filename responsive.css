@@ -15,4 +15,10 @@
     .booking { align-items: start; flex-direction: column; gap: 28px; padding-bottom: 75px; padding-top: 75px; }
     .footer-inner { gap: 30px; }
     .footer-meta { text-align: left; }
+    .booking-panel { display: block; max-height: 92vh; width: calc(100% - 24px); }
+    .booking-panel-intro, .booking-form { padding: 40px 25px; }
+    .booking-panel-intro h2 { font-size: 49px; }
+    .booking-hours { margin-top: 30px; }
+    .booking-form { padding-top: 34px; }
+    .form-row { gap: 16px; }
 }
